@@ -1,0 +1,205 @@
+:root {
+  --white: #ffffff;
+  --dark-grey: #333333;
+}
+
+body {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 60px; 
+  margin-bottom: 0;
+  background-color: #315a39;
+  padding: 50px;
+  font-family: 'Merriweather', sans-serif;
+  color: var(--white);
+}
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a2f1e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-container ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #97cf8a;
+  transition: width 0.3s ease;
+}
+
+.nav-container ul li a:hover {
+  color: #97cf8a;
+}
+
+.nav-container ul li a:hover::after {
+  width: 100%;
+}
+
+h1:not(.nav-title) {
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 5px 5px 1px black;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+.link-section {
+  margin-bottom: 30px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-list a, .linkedin a {
+  color: #99efcb;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+  display: block;
+}
+
+.link-list a:hover, .linkedin a:hover {
+  color: #285CD7;
+  text-decoration: underline;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 3px 3px 1px black;
+}
+
+h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-shadow: 2px 2px 1px black;
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #285CD7;
+    background-color: rgba(151, 207, 138, 0.2);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.link-list a,
+button,
+input {
+    padding: 8px;
+    margin: 5px 0;
+    display: block;
+}
+
+button {
+    background-color: #1a2f1e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #97cf8a;
+}
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #315a39;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #315a39;
+}
+
+.keyboard-help {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a2f1e;
+  border-radius: 8px;
+  scroll-margin-top: 100px;
+}
+
+.keyboard-help h2 {
+  color: #99efcb;
+  margin-bottom: 15px;
+}
+
+.keyboard-shortcuts {
+  list-style: none;
+  padding: 0;
+}
+
+.keyboard-shortcuts li {
+  margin: 10px 0;
+  color: white;
+}
+
+.keyboard-help p {
+  margin-top: 20px;
+  color: #99efcb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
